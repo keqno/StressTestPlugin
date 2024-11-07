@@ -1,0 +1,4 @@
+name: StressTest
+version: 1.0
+main: me.keano.azurite.StressTest
+api-version: 1.13
