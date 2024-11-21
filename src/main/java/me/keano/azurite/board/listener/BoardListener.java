@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockExplodeEvent;
+import org.bukkit.event.entity.EntityExplodeEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
@@ -31,6 +32,11 @@ public class BoardListener implements Listener {
 
     @EventHandler
     public void onExplode(BlockExplodeEvent e) {
+        e.blockList().clear();
+    }
+
+    @EventHandler
+    public void onExplode(EntityExplodeEvent e) {
         e.blockList().clear();
     }
 
